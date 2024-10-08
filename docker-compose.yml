@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: go_app
+    ports:
+      - "8080:8080"  # Map port 8080 on host to port 8080 in the container
+    environment:
+      - LOG_LEVEL=info  # Example of passing environment variables
